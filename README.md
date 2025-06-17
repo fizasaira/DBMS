@@ -54,6 +54,33 @@ telecom_dashboard/
 ├── sql/
 │   └── schema.sql               # Full SQL DDL for database
 │   └── procedures.sql           # Stored procedures and triggers
+
+🗂️ Dual Portal Architecture
+This project is structured into two main interfaces:
+
+1. 👤 Customer Portal (main.py)
+Secure login with email and phone
+
+Displays customer profile, plan details, usage, billing history, and support ticket submission
+
+Written in Streamlit and connects directly to the MySQL backend
+
+Includes billing_utils.py for invoice generation and tax calculations
+
+2. 🧑‍💼 Employee/Admin Portal (coming next in app.py + pages/)
+Allows employees/admins to:
+
+View and manage customers
+
+Run custom analytical queries (usage, billing, revenue)
+
+Generate PDF reports
+
+Update plan assignments, status, billing records
+
+Modular Streamlit multipage setup (pages/1_Customers.py, 2_Billing.py, etc.)
+
+This portal is ideal for internal use with access to advanced and customized backend SQL queries
 🧪 How to Run
 🔧 1. Clone the Repo
 bash
